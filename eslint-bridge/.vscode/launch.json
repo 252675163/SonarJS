@@ -5,7 +5,7 @@
       "type": "node",
       "request": "launch",
       "name": "All Tests",
-      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest.js",
       "args": ["-i"],
       "internalConsoleOptions": "openOnSessionStart"
     },
@@ -13,8 +13,9 @@
       "type": "node",
       "request": "launch",
       "name": "Current Open Test",
-      "program": "${workspaceFolder}/node_modules/.bin/jest",
-      "args": ["-i", "${fileBasenameNoExtension}"],
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest.js",
+      "outFiles": ["${workspaceFolder}/src/rules/*.ts", "${workspaceFolder}/test/rules/*.ts"],
+      "args": ["${fileBasenameNoExtension}"],
       "internalConsoleOptions": "openOnSessionStart"
     }
   ]
